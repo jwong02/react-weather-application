@@ -7,6 +7,14 @@ body {
   max-width: 550px;
 }
 
+.app-container {
+  padding: 30px 35px;
+  border: 1px solid #d9dad7;
+  border-radius: 15px;
+  background: #d9dad7;
+  box-shadow: 4px 4px 5px rgba(143, 135, 135, 0.5);
+}
+
 .App footer {
   font-size: 11px;
   margin: 10px auto;

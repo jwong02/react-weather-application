@@ -11,6 +11,7 @@ export default function Weather() {
               type="search"
               placeholder="search for a city"
               autocomplete="off"
+              autoFocus="on"
               className="form-control"
             />
           </div>
@@ -36,7 +37,7 @@ export default function Weather() {
             </li>
           </ul>
         </div>
-        <div className="col-4">
+        <div className="col-4 mt-2">
           <ul className="high-low-section">
             <li>
               <span className="current-high-low">High:</span>

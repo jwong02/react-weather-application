@@ -1,3 +1,49 @@
 .Weather {
+  padding: 30px 35px;
   border: 1px solid #d9dad7;
+  border-radius: 15px;
+  background: #d9dad7;
+  box-shadow: 4px 4px 5px rgba(143, 135, 135, 0.5);
+}
+
+.Weather h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #17a2b8;
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+
+.Weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+.Weather li {
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.Weather .main-temp {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.Weather .current-high-low,
+.current-condition {
+  font-weight: bold;
+}
+
+.Weather .units {
+  position: relative;
+  top: -13px;
+  left: -3px;
+  font-size: 30px;
+}
+
+.Weather .btn {
+  box-shadow: 4px 4px 5px rgba(143, 135, 135, 0.5);
+  color: white;
+  background-color: #17a2b8;
+  border: 1px solid #17a2b8;
 }

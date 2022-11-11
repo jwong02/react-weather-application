@@ -3,8 +3,6 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  let apiKey = e37af8b7e5570ed34e9bd67d3c3d2d12;
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   return (
     <div className="Weather">
       <h1>New York</h1>

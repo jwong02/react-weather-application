@@ -3,13 +3,12 @@ import "./Engine.css";
 
 export default function Engine() {
   return (
-    <form id="search-form" class="mb-3 mt-2">
+    <form id="search-form" className="mb-3 mt-2">
       <div className="row">
         <div className="col-9">
           <input
             type="search"
             placeholder="search for a city"
-            autocomplete="off"
             autoFocus="on"
             className="form-control"
           />

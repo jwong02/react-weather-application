@@ -21,7 +21,7 @@ export default function WeatherInfo(props) {
             </li>
           </ul>
         </div>
-        <div className="col-4 mt-2">
+        <div className="col-4 mt-3">
           <ul className="high-low-section">
             <li>
               <span className="current-high-low">High:</span>

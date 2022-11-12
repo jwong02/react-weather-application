@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Date from "./Date";
+
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
 
@@ -23,52 +24,26 @@ export default function Weather(props) {
   if (ready) {
     return (
       <div className="Weather">
-        <h1>{weatherData.city}</h1>
-        <ul>
-          <li>
-            Last Updated on <Date date={weatherData.date} />
-          </li>
-        </ul>
-        <div className="row">
-          <div className="col-4">
-            <ul>
-              <li>
-                <span className="main-temp">
-                  {Math.round(weatherData.temperature)}
-                </span>
-                <span className="units">°</span>
-              </li>
-            </ul>
+        <form className="mb-3 mt-2">
+          <div className="row">
+            <div className="col-9">
+              <input
+                type="search"
+                placeholder="search for a city"
+                autoFocus="on"
+                className="form-control"
+              />
+            </div>
+            <div className="col-3">
+              <input
+                type="submit"
+                value="Search"
+                className="btn btn-info w-100"
+              />
+            </div>
           </div>
-          <div className="col-4 mt-2">
-            <ul className="high-low-section">
-              <li>
-                <span className="current-high-low">High:</span>
-                <span> {Math.round(weatherData.high)}</span>
-                <span className="high-low-units">°</span>
-              </li>
-              <li>
-                <span className="current-high-low">Low:</span>
-                <span> {Math.round(weatherData.low)}</span>
-                <span className="high-low-units">°</span>
-              </li>
-            </ul>
-          </div>
-          <div className="col-4">
-            <ul>
-              <li>
-                <img
-                  src={weatherData.iconURL}
-                  alt={weatherData.icon}
-                  className="main-weather-icon"
-                />
-              </li>
-              <li className="current-condition text-capitalize">
-                {weatherData.description}
-              </li>
-            </ul>
-          </div>
-        </div>
+        </form>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {

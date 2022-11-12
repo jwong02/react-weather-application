@@ -1,5 +1,5 @@
 import React from "react";
-import Engine from "./Engine";
+
 import Weather from "./Weather";
 
 import "./App.css";
@@ -8,7 +8,6 @@ export default function App() {
   return (
     <div className="App">
       <div className="app-container">
-        <Engine />
         <Weather defaultCity="New York" />
       </div>
       <footer>

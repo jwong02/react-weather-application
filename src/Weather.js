@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Date from "./Date";
 import axios from "axios";
 import "./Weather.css";
 
@@ -6,15 +7,14 @@ export default function Weather(props) {
   let [ready, setReady] = useState(false);
   let [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       temperature: response.data.main.temp,
       high: response.data.main.temp_max,
       low: response.data.main.temp_min,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       iconURL: `https://ssl.gstatic.com/onebox/weather/64/sunny.png`,
-      date: "Saturday 12:00",
     });
 
     setReady(true);
@@ -25,7 +25,9 @@ export default function Weather(props) {
       <div className="Weather">
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>Last Updated on {weatherData.date}</li>
+          <li>
+            Last Updated on <Date date={weatherData.date} />
+          </li>
         </ul>
         <div className="row">
           <div className="col-4">

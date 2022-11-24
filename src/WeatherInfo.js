@@ -40,7 +40,7 @@ export default function WeatherInfo(props) {
           <ul>
             <li>
               <div className="main-weather-icon">
-                <WeatherIcon code={props.data.icon} />
+                <WeatherIcon code={props.data.icon} size={65} />
               </div>
             </li>
             <li className="current-condition text-capitalize">

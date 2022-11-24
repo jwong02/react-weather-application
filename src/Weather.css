@@ -27,14 +27,13 @@
 
 .main-weather-icon {
   position: relative;
-  top: -20px;
   left: -10px;
 }
 
 .current-condition {
   font-weight: bold;
   position: relative;
-  top: -40px;
+  top: -10px;
 }
 
 .Weather .units {

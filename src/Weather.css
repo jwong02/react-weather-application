@@ -27,7 +27,7 @@
 
 .main-weather-icon {
   position: relative;
-  left: -10px;
+  left: 10px;
 }
 
 .current-condition {
